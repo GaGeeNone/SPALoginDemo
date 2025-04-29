@@ -11,7 +11,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000', // Your frontend URL
+  origin: 'http://localhost:3000', // Frontend URL
   credentials: false
 }));
 
@@ -79,7 +79,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`API server running on http://localhost:${PORT}`);
 }); 
