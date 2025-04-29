@@ -7,9 +7,23 @@ const { auth } = require('express-oauth2-jwt-bearer');
 // Create Express app
 const app = express();
 
-// Middleware
+// Middleware for nice console logs
 app.use(morgan('dev'));
 app.use(express.json());
+
+// CORS Configuration
+// This allows requests from the specified origin (frontend)
+// You can modify this to allow multiple origins by using an array:
+// origin: ['http://localhost:3000', 'http://localhost:3001', 'https://your-domain.com']
+// Or use a function for more complex logic:
+// origin: function(origin, callback) {
+//   const allowedOrigins = ['http://localhost:3000', 'http://localhost:3001'];
+//   if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+//     callback(null, true);
+//   } else {
+//     callback(new Error('Not allowed by CORS'));
+//   }
+// }
 app.use(cors({
   origin: 'http://localhost:3000', // Frontend URL
   credentials: false
