@@ -17,7 +17,7 @@ const Home = () => {
           const accessToken = await getAccessTokenSilently();
           
           // Call the API with the access token
-          const response = await fetch('http://localhost:3000/api/data', {
+          const response = await fetch('http://localhost:3001/api/data', {
             headers: {
               Authorization: `Bearer ${accessToken}`
             }
