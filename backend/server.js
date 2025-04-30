@@ -31,8 +31,8 @@ app.use(cors({
 
 // Configure Auth0 JWT validation middleware
 const jwtCheck = auth({
-  audience: process.env.AUTH0_AUDIENCE || 'https://linseanyu.us.auth0.com/api/v2/',
-  issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL || 'https://linseanyu.us.auth0.com',
+  audience: process.env.AUTH0_AUDIENCE || 'https://dev-fwwdto1s75hla2wp.us.auth0.com/api/v2/',
+  issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL || 'https://dev-fwwdto1s75hla2wp.us.auth0.com',
   tokenSigningAlg: 'RS256'
 });
 
